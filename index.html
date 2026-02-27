@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scoop Sorveteria</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+tailwind.config = {
+theme: {
+extend: {
+
+fontFamily: {
+titulo:["Playfair Display","serif"],
+texto:["Poppins","sans-serif"]
+},
+
+colors:{
+primary:"#E76F8B",
+secondary:"#F7D6E0",
+cream:"#FFF8F4",
+dark:"#4B2E2E"
+}
+
+}
+}
+}
+</script>
+
+</head>
+
+<body class="font-texto bg-cream text-dark">
+
+<header class="flex justify-between items-center px-6 py-4 md:px-16 bg-white shadow-sm">
+
+<img src="./assets/images/logo.png" class="w-32 md:w-40">
+
+<button id="menu-btn" class="md:hidden flex flex-col gap-1 relative z-20">
+
+<span class="linha w-6 h-0.5 bg-dark transition-all duration-300"></span>
+<span class="linha w-6 h-0.5 bg-dark transition-all duration-300"></span>
+<span class="linha w-6 h-0.5 bg-dark transition-all duration-300"></span>
+
+</button>
+
+<nav id="menu"
+class="hidden absolute top-20 left-0 w-full bg-white text-center shadow-md md:static md:block md:w-auto md:shadow-none">
+
+<ul class="flex flex-col md:flex-row gap-6 p-6 md:p-0 font-medium">
+<li><a href="#cardapio" class="hover:text-primary transition">Cardápio</a></li>
+<li><a href="#footer" class="hover:text-primary transition">Sobre</a></li>
+<li><a href="#whatsApp" class="hover:text-primary transition">WhatsApp</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+<main>
+
+<section class="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-16">
+
+<div class="md:w-1/2 text-center md:text-left">
+
+<h1 class="font-titulo text-4xl md:text-6xl mb-6 leading-tight">
+O prazer do<br>
+<span class="text-primary">sorvete artesanal</span>
+</h1>
+
+<p class="mb-8 text-gray-600">
+Sabores únicos preparados diariamente com ingredientes frescos.
+</p>
+
+<a href="#cardapio"
+class="inline-block bg-primary text-white px-8 py-3 rounded-full shadow-md hover:scale-105 transition">
+Ver Cardápio
+</a>
+
+</div>
+
+<div class="md:w-1/2 mt-10 md:mt-0">
+<img src="./assets/images/banner.png" class="w-full max-w-md mx-auto">
+</div>
+
+</section>
+
+
+<section id="cardapio" class="max-w-5xl mx-auto px-6 py-16">
+
+<h2 class="font-titulo text-4xl text-center mb-12">
+Nosso Cardápio
+</h2>
+
+
+<nav id="nav-categorias" class="overflow-x-auto whitespace-nowrap snap-x flex gap-3 justify-center pb-2">
+
+<button data-cat="sorvetes"
+class="snap-start px-6 py-2 rounded-full bg-primary text-white font-medium shadow btn-cat">
+Sorvetes
+</button>
+
+<button data-cat="Milkshakes"
+class="snap-start px-6 py-2 rounded-full bg-secondary text-dark font-medium shadow btn-cat">
+Milkshakes
+</button>
+
+<button data-cat="bebidas"
+class="snap-start px-6 py-2 rounded-full bg-secondary text-dark font-medium shadow btn-cat">
+Bebidas
+</button>
+
+<button data-cat="Sobremesas"
+class="snap-start px-6 py-2 rounded-full bg-secondary text-dark font-medium shadow btn-cat">
+Sobremesas
+</button>
+
+</nav>
+
+
+<div id="cat-sorvetes" class="categoria-conteudo mt-12">
+
+<h3 class="text-primary font-titulo text-2xl mb-6">
+Sorvetes
+</h3>
+
+<div class="space-y-8">
+
+<div>
+<div class="flex justify-between font-semibold">
+<span>Casquinha Simples</span>
+<span class="text-primary">R$ 6</span>
+</div>
+<p class="text-sm text-gray-600">
+1 bola de sorvete artesanal servido em casquinha crocante.
+</p>
+</div>
+
+<div>
+<div class="flex justify-between font-semibold">
+<span>Casquinha Dupla</span>
+<span class="text-primary">R$ 9</span>
+</div>
+<p class="text-sm text-gray-600">
+Duas bolas de sorvete com sabores à escolha.
+</p>
+</div>
+
+<div>
+<div class="flex justify-between font-semibold">
+<span>Copo 3 Sabores</span>
+<span class="text-primary">R$ 12</span>
+</div>
+<p class="text-sm text-gray-600">
+Escolha até três sabores diferentes de sorvete artesanal.
+</p>
+</div>
+
+<div>
+<div class="flex justify-between font-semibold">
+<span>Banana Split</span>
+<span class="text-primary">R$ 18</span>
+</div>
+<p class="text-sm text-gray-600">
+Banana, três bolas de sorvete, calda de chocolate e chantilly.
+</p>
+</div>
+
+</div>
+
+</div>
+
+
+<div id="cat-Milkshakes" class="categoria-conteudo hidden mt-12">
+
+<h3 class="text-primary font-titulo text-2xl mb-6">
+Milkshakes
+</h3>
+
+<div class="space-y-8">
+
+<div>
+<div class="flex justify-between font-semibold">
+<span>Milkshake Chocolate</span>
+<span class="text-primary">R$ 14</span>
+</div>
+<p class="text-sm text-gray-600">
+Sorvete de chocolate batido com leite e calda cremosa.
+</p>
+</div>
+
+<div>
+<div class="flex justify-between font-semibold">
+<span>Milkshake Morango</span>
+<span class="text-primary">R$ 14</span>
+</div>
+<p class="text-sm text-gray-600">
+Sorvete de morango batido com leite e pedaços da fruta.
+</p>
+</div>
+
+<div>
+<div class="flex justify-between font-semibold">
+<span>Milkshake Ovomaltine</span>
+<span class="text-primary">R$ 16</span>
+</div>
+<p class="text-sm text-gray-600">
+Milkshake cremoso com sorvete de creme e Ovomaltine.
+</p>
+</div>
+
+</div>
+
+</div>
+
+
+<div id="cat-bebidas" class="categoria-conteudo hidden mt-12">
+
+<h3 class="text-primary font-titulo text-2xl mb-6">
+Bebidas
+</h3>
+
+<div class="space-y-8">
+
+<div>
+<div class="flex justify-between font-semibold">
+<span>Refrigerante</span>
+<span class="text-primary">R$ 7</span>
+</div>
+<p class="text-sm text-gray-600">
+Lata 350ml – Coca, Guaraná ou Fanta.
+</p>
+</div>
+
+<div>
+<div class="flex justify-between font-semibold">
+<span>Suco Natural</span>
+<span class="text-primary">R$ 10</span>
+</div>
+<p class="text-sm text-gray-600">
+Suco natural de laranja, maracujá ou morango.
+</p>
+</div>
+
+<div>
+<div class="flex justify-between font-semibold">
+<span>Água</span>
+<span class="text-primary">R$ 4</span>
+</div>
+<p class="text-sm text-gray-600">
+Água mineral sem gás 500ml.
+</p>
+</div>
+
+</div>
+
+</div>
+
+
+<div id="cat-Sobremesas" class="categoria-conteudo hidden mt-12">
+
+<h3 class="text-primary font-titulo text-2xl mb-6">
+Sobremesas
+</h3>
+
+<div class="space-y-8">
+
+<div>
+<div class="flex justify-between font-semibold">
+<span>Petit Gateau</span>
+<span class="text-primary">R$ 20</span>
+</div>
+<p class="text-sm text-gray-600">
+Bolo de chocolate quente com sorvete de creme.
+</p>
+</div>
+
+<div>
+<div class="flex justify-between font-semibold">
+<span>Brownie com Sorvete</span>
+<span class="text-primary">R$ 18</span>
+</div>
+<p class="text-sm text-gray-600">
+Brownie artesanal servido com bola de sorvete.
+</p>
+</div>
+
+<div>
+<div class="flex justify-between font-semibold">
+<span>Açaí 400ml</span>
+<span class="text-primary">R$ 16</span>
+</div>
+<p class="text-sm text-gray-600">
+Açaí cremoso com granola e leite condensado.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer id="footer" class="bg-dark text-white text-center py-14 px-6">
+
+<h3 class="font-titulo text-2xl mb-4">
+Scoop Sorveteria
+</h3>
+
+<p>Rua das Flores, 120</p>
+<p>WhatsApp: (11) 98765-4321</p>
+<p>Aberto das 13h às 22h</p>
+
+</footer>
+
+
+<a href="https://wa.me/5511987654321" class="fixed bottom-6 right-6">
+<img src="./assets/images/whatsapp.png" class="w-14">
+</a>
+
+<script>
+
+/* MENU BURGUER COM X */
+
+const menuBtn = document.getElementById("menu-btn")
+const menu = document.getElementById("menu")
+const linhas = document.querySelectorAll("#menu-btn .linha")
+
+menuBtn.addEventListener("click",()=>{
+
+menu.classList.toggle("hidden")
+
+linhas[0].classList.toggle("rotate-45")
+linhas[0].classList.toggle("translate-y-1.5")
+
+linhas[1].classList.toggle("opacity-0")
+
+linhas[2].classList.toggle("-rotate-45")
+linhas[2].classList.toggle("-translate-y-1.5")
+
+})
+
+/* CATEGORIAS */
+
+const botoes=document.querySelectorAll('.btn-cat')
+const conteudos=document.querySelectorAll('.categoria-conteudo')
+
+function mudarCategoria(cat){
+
+conteudos.forEach(div=>{
+div.id==='cat-'+cat?div.classList.remove('hidden'):div.classList.add('hidden')
+})
+
+botoes.forEach(btn=>{
+if(btn.dataset.cat===cat){
+btn.classList.add('bg-primary','text-white')
+btn.classList.remove('bg-secondary')
+}else{
+btn.classList.remove('bg-primary','text-white')
+btn.classList.add('bg-secondary')
+}
+})
+
+}
+
+botoes.forEach(btn=>{
+btn.addEventListener('click',()=>{
+mudarCategoria(btn.dataset.cat)
+})
+})
+
+</script>
+
+</body>
+</html>
